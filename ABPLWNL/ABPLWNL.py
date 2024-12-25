@@ -35,3 +35,6 @@ for i, command in enumerate(commands):
         case 'a':
             if not a:
                 commands.pop(i+1)
+        case _:
+            print(f"\nInvalid command: {command}.")
+            exit()
