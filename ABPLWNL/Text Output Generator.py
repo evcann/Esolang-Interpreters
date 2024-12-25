@@ -18,7 +18,7 @@ for i, letter in enumerate(input_as_list):
 
     if i+1 == len(input_as_list):
         program_commands.extend(('3', '7')) # 3 command is not needed at the end because the program ends
-        print(''.join(program_commands))
+        break
 
     elif input_as_list[i + 1] != letter:
         program_commands.extend(('3', '7', '3')) # Regular case, where there are no repeated letters
@@ -31,7 +31,9 @@ for i, letter in enumerate(input_as_list):
             else:
                 break
         program_commands.extend(('3', '7'*repeats_count, '3'))
-        # This can be optimized more for cases of repeats at the end of the text
-        # For example: "Bass" would unnecessarily add a 3 command at the end
 
     b = unicode_value
+
+if program_commands[-1] == '3':
+    program_commands.pop() # Swapping at the end is never needed, but could be added in rare cases of repeating letters at the end of a word like "bass"
+print(''.join(program_commands))
