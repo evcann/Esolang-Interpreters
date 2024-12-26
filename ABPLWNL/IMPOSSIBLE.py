@@ -3,7 +3,7 @@ from ABPLWNL import ABPLWNL_input
 def shift_right(a):
     a.insert(0, a.pop())
 
-def IMPOSSIBLE_input(program, ignore_unknown = False):
+def IMPOSSIBLE_input(program, ignore_unknown = False, output_code = False):
     commands_stack = []
     program_list = list(program)
 
@@ -31,8 +31,11 @@ def IMPOSSIBLE_input(program, ignore_unknown = False):
                 exit()
 
         shift_right(commands)
-        
-    ABPLWNL_input(''.join(commands_stack))
+
+    if output_code:
+        return ''.join(commands_stack)
+    else: 
+        ABPLWNL_input(''.join(commands_stack))
 
 if __name__ == "__main__":
     IMPOSSIBLE_in = input("Enter code:")
