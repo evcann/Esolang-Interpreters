@@ -36,7 +36,7 @@ def ABPLWNL_input(program):
                 if not a:
                     commands.pop(i+1)
             case _:
-                print(f"\nInvalid command: {command}.")
+                print(f"\nInvalid command {command} at index {i}.")
                 exit()
 
 if __name__ == "__main__":
