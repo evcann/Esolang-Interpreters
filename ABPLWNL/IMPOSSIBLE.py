@@ -38,6 +38,11 @@ def IMPOSSIBLE_input(program, ignore_unknown = False, output_code = False):
         ABPLWNL_input(''.join(commands_stack))
 
 if __name__ == "__main__":
-    IMPOSSIBLE_in = input("Enter code:")
-    IMPOSSIBLE_input(IMPOSSIBLE_in)
+    try:
+        program_input = open("ABPLWNL/in.IMPOSSIBLE", 'r').read()
+    except FileNotFoundError:
+        open("ABPLWNL/in.IMPOSSIBLE", 'x')
+        print("Place program in in.ABPLWNL, then run again.")
+        exit()
+    IMPOSSIBLE_input(program_input)
     print('\n')

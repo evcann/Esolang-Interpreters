@@ -40,6 +40,12 @@ def ABPLWNL_input(program):
                 exit()
 
 if __name__ == "__main__":
-    program_input = input("Enter code:")
+    try:
+        program_input = open("ABPLWNL/in.ABPLWNL", 'r').read()
+    except FileNotFoundError:
+        open("ABPLWNL/in.ABPLWNL", 'x')
+        print("Place program in in.ABPLWNL, then run again.")
+        exit()
+
     ABPLWNL_input(program_input)
     print('\n')

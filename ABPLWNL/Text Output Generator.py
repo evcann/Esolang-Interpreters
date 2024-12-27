@@ -36,4 +36,8 @@ for i, letter in enumerate(input_as_list):
 
 if program_commands[-1] == '3':
     program_commands.pop() # Swapping at the end is never needed, but could be added in rare cases of repeating letters at the end of a word like "bass"
-print(''.join(program_commands))
+
+output_file = open("ABPLWNL/out.ABPLWNL", 'w')
+print("Output has been sucessfully generated and written to ABPLWNL/out.ABPLWNL")
+output_file.write(''.join(program_commands))
+output_file.close()

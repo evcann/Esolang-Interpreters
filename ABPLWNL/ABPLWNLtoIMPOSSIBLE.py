@@ -1,4 +1,4 @@
-ABPLWNL_code = input("Enter code:")
+ABPLWNL_code = open("ABPLWNL/in.ABPLWNL", 'r').read()
 
 for x in ABPLWNL_code:
     match (x):
@@ -40,4 +40,7 @@ for command in ABPLWNL_code:
     command_stack.append(commands[2])
     shift_right(commands)
 
-print(''.join(command_stack))
+output_file = open("ABPLWNL/out.IMPOSSIBLE", 'w')
+print("Code has been translated and written to ABPLWNL/out.IMPOSSIBLE")
+output_file.write(''.join(command_stack))
+output_file.close()
