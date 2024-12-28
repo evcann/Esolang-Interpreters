@@ -44,7 +44,7 @@ if __name__ == "__main__":
         program_input = open("ABPLWNL/in.ABPLWNL", 'r').read()
     except FileNotFoundError:
         open("ABPLWNL/in.ABPLWNL", 'x')
-        print("Place program in in.ABPLWNL, then run again.")
+        print("Place program in ABPLWNL/in.ABPLWNL, then run again.")
         exit()
 
     ABPLWNL_input(program_input)

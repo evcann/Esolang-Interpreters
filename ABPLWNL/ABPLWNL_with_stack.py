@@ -53,10 +53,10 @@ def ABPLWNL_input(program):
 
 if __name__ == "__main__":
     try:
-        program_input = open("ABPLWNL/in.ABPLWNL", 'r').read()
+        program_input = open("ABPLWNL/in.{{{files}}}", 'r').read()
     except FileNotFoundError:
-        open("ABPLWNL/in.ABPLWNL", 'x')
-        print("Place program in in.ABPLWNL, then run again.")
+        open("ABPLWNL/in.{{{files}}}", 'x')
+        print("Place program in ABPLWNL/in.{{{files}}}, then run again.")
         exit()
 
     ABPLWNL_input(program_input)
