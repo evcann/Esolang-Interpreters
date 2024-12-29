@@ -5,7 +5,7 @@ program_commands = []
 a, b = 0, 0
 
 for letter in input_as_list:
-    if b != letter:
+    if b != ord(letter):
         difference_a = ord(letter) - a
         difference_b = ord(letter) - b
 
@@ -29,5 +29,5 @@ for letter in input_as_list:
 
 output_file = open("ABPLWNL/out.ABPLWNL", 'w')
 print("Output has been sucessfully generated and written to ABPLWNL/out.ABPLWNL")
-output_file.write(''.join(program_commands).replace('33', ''))
+output_file.write(''.join(program_commands))
 output_file.close()
