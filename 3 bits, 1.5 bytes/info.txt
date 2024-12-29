@@ -1,0 +1,6 @@
+3 Bits, 1.5 Bytes is an assembly language for a 3-bit CPU, made by MihaiEso. With 1.5 bytes of memory, this machine could store at least 2 instructions.
+
+https://esolangs.org/wiki/3_Bits,_1.5_Bytes
+https://esolangs.org/wiki/User:MihaiEso
+
+Example programs:
